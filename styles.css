@@ -1,53 +1,42 @@
 html,
 body{
-	display: flex;
 	margin: 0;
 	padding: 0;
-	height: 100vh;
-	width: 100vw;
 	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(to left, rgb(9, 22, 203),rgb(14, 4, 106));
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
 }
 
 .container{
 	display: flex;
-	border: 3px solid black;
-	height: 500px;
-	width: 500px;
-	justify-content: center;
-	align-items: center;
+	max-width: 320px;
+	margin: 30px auto;
 	flex-direction: column;
-	gap: 15px;
-	border-radius: 15px;
-	background-color: rgb(29, 58, 175);
 		
 }
 
 #logo{
-	height: 50%;
-	width: 50%;
+	height: 150px;
+	width:150px;
 	border-radius: 50%;
+	margin: 0 auto;
 
 }
 
 input,
 button{
 	color: #ffff;
-	width: 60%;
 	padding: 20px;
 	border-radius: 15px;
 	font-size: 20px;
 	text-align: center;
-
+	border: 0;
 }
 
 input {
 	background-color: #DCE1EB;
 	outline:none;
 	box-sizing: border-box;
+	margin: 10px 0;
 }
 
 button{
