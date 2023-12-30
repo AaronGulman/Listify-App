@@ -7,38 +7,49 @@ body{
 	width: 100vw;
 	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(to left, rgb(9, 22, 203),rgb(14, 4, 106));
-	box-sizing: border-box;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
 
 .container{
 	display: flex;
-	border: 1px solid red;
+	border: 3px solid black;
 	height: 500px;
 	width: 500px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	gap: 15px;
+	border-radius: 15px;
+	background-color: rgb(29, 58, 175);
+		
+}
+
+#logo{
+	height: 50%;
+	width: 50%;
+	border-radius: 50%;
+
+}
+
+input,
+button{
+	color: #ffff;
+	width: 60%;
+	padding: 20px;
+	border-radius: 15px;
+	font-size: 20px;
+	text-align: center;
+
 }
 
 input {
-	color: #ffff;
 	background-color: #DCE1EB;
 	outline:none;
-	min-width:50px;
-	width: 200px;
-	padding: 20px;
-
+	box-sizing: border-box;
 }
 
 button{
-	color: #ffff;
 	background-color: #4859ac;
-	min-width:50px;
-	width: 200px;
-	padding: 20px;
-
-
 }
