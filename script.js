@@ -25,6 +25,11 @@ function newItem(){
 	push(itemsInDB,inputValue);
 	let list = document.createElement('li')
 	uList.appendChild(list)
+	clear();
 	list.textContent += inputValue;
 	console.log(`${inputValue},added to database`);
+}
+
+function clear(){
+	userInput.value = ''
 }
