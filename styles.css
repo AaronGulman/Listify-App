@@ -4,6 +4,7 @@ body{
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(to left, rgb(9, 22, 203),rgb(14, 4, 106));
+	user-select: none;
 }
 
 .container{
@@ -71,5 +72,5 @@ li:hover{
 	background: #ffff;
 	color: #000;
 	box-shadow: none;
-	
+
 }
