@@ -28,6 +28,7 @@ function newItem(){
 }
 
 onValue(itemsInDB, function(snapshot){
+	if(snapshot.exists() == true){
 	let items = Object.entries(snapshot.val());
 	console.log(snapshot.val())
 
@@ -39,6 +40,9 @@ onValue(itemsInDB, function(snapshot){
 	let currentItemValue = currentItem[1]
 		addList(currentItem)
 	}
+}else{
+	uList.textContent = "No items here at the moment"
+}
 
 })
 
