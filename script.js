@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
 	databaseURL: "https://listify-e794f-default-rtdb.firebaseio.com/"
@@ -28,18 +28,32 @@ function newItem(){
 }
 
 onValue(itemsInDB, function(snapshot){
-	let items = Object.values(snapshot.val());
+	let items = Object.entries(snapshot.val());
+	console.log(snapshot.val())
+
 	clearUl()
+
 	for(let i = 0; i < items.length; i++){
-		addList(items[i])
+	let currentItem = items[i];
+	let currentItemID = currentItem[0];
+	let currentItemValue = currentItem[1]
+		addList(currentItem)
 	}
 
 })
 
-function addList(inputValue){
+function addList(item){
+	let itemID = item[0]
+	let itemValue = item[1]
 	let list = document.createElement('li')
 	uList.appendChild(list)
-	list.textContent += inputValue;
+	list.textContent += itemValue;
+
+		list.addEventListener("dblclick", ()=>{
+		let itemLocationInDB = ref(database, `items/${itemID}`)
+		remove(itemLocationInDB)
+		console.log(itemLocationInDB)
+		})
 }
 
 function clear(){
