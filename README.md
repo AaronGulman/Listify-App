@@ -11,6 +11,8 @@
 
 Listify is a simple and intuitive to-do list application built using JavaScript and Firebase. The app allows users to add, view, and delete items in a list. It includes both a web version and a basic structure for mobile compatibility using Expo.
 
+- Live Demo: https://mylistify.netlify.app/
+
 ## Features
 
 - **Add Items**: Users can add new items to their to-do list.
